@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h1>{{msg}}</h1>
+    <h2>Total logs</h2>
+<body>
+<table border="1">
+    <thead>
+         <td>ID</td>
+         <td>created_on</td>
+         <td>updated_on</td>
+    </thead>
+
+    {% for r in rows %}
+
+    <tr>
+        <td>{{r['id']}}</td>
+        <td>{{r['created']}}</td>
+        <td>{{r['updated']}}</td>
+    </tr>
+
+    {% endfor %}
+</table>
+
+<a href="/"><ul><button type ="btn btn-success " >Go To Home Page</button></ul></a>
+
+</body>
+</html>

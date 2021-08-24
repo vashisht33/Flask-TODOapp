@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h1>{{msg}}</h1>
+    <h2>Total Records</h2>
+<body>
+<table border="1">
+    <thead>
+         <td>ID</td>
+         <td>Name</td>
+         <td>email</td>
+         <td>Phone</td>
+         <td>CreatedOn</td>
+         <td>UpdatedOn</td>
+    </thead>
+
+    {% for r in rows %}
+
+    <tr>
+        <td>{{r['id']}}</td>
+        <td>{{r['name']}}</td>
+        <td>{{r['email']}}</td>
+        <td>{{r['phone']}}</td>
+        <td>{{r['created']}}</td>
+        <td>{{r['updated']}}</td>
+    </tr>
+
+    {% endfor %}
+</table>
+
+<a href="/"><ul><button type ="btn btn-success " >Go To Home Page</button></ul></a>
+
+</body>
+</html>
